@@ -31,20 +31,18 @@ class WinnersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return worldCups.count
+       worldCups.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WorldCupTableViewCell
         let worldCup = worldCups[indexPath.row]
-        cell.textLabel?.text = "Copa \(worldCup.year) - \(worldCup.country)"
-        cell.detailTextLabel?.text = "\(worldCup.winner) vs \(worldCup.vice)"
-        if let image = UIImage(named: "\(worldCup.winner).png"){
-            cell.imageView?.image = image
-        } else {
-            cell.imageView?.image = UIImage(named: "default.png")
-        }
-      
+        cell.prepare(with: worldCup)
+
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        144
     }
 }
