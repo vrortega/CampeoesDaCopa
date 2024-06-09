@@ -154,6 +154,7 @@
                                     <outlet property="winnerLb" destination="iQP-tJ-8UW" id="XDQ-Ev-9mQ"/>
                                     <outlet property="winnerScoreLb" destination="RX7-jE-F9m" id="LUC-Kb-6UI"/>
                                     <outlet property="yearLb" destination="iaz-yX-kR6" id="if3-Hz-fQH"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="pYV-TX-JzE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -163,9 +164,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Campeões" id="mA4-yq-RcE"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="ZgA-lw-Zlg"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4Q-ZY-TIx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

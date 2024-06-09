@@ -16,6 +16,13 @@ class WinnersTableViewController: UITableViewController {
         loadWorldCups()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! WorldCupViewController
+        let worldCup = worldCups[tableView.indexPathForSelectedRow!.row]
+        vc.worldCup = worldCup
+    
+    }
+    
     func loadWorldCups() {
         guard let fileURL = Bundle.main.url(forResource: "winners", withExtension: "json") else {
             print("Arquivo nao encontrado")
