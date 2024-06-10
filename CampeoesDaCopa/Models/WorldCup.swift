@@ -19,10 +19,10 @@ struct WorldCup: Codable {
 
 struct Match: Codable {
     let stage: String
-    let games: [Games]
+    let games: [Game]
 }
 
-struct Games: Codable {
+struct Game: Codable {
     let home: String
     let away: String
     let score: String
